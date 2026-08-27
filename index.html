@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NASA - National Aeronautics and Space Administration. Explore the universe, discover new worlds, and learn about the future of space exploration." />
+  <title>NASA - Explore the Universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <!-- Stars background -->
+  <div class="stars" id="stars-bg"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" id="nav-logo">
+        <svg viewBox="0 0 110 110" class="nasa-meatball" aria-label="NASA Logo">
+          <circle cx="55" cy="55" r="50" fill="#0b3d91"/>
+          <circle cx="55" cy="55" r="48" fill="none" stroke="#fc3d21" stroke-width="2.5"/>
+          <text x="55" y="62" text-anchor="middle" fill="white" font-family="Outfit" font-weight="900" font-size="28">NASA</text>
+          <path d="M20 80 Q55 20 90 80" fill="none" stroke="#fc3d21" stroke-width="2" opacity="0.6"/>
+          <circle cx="80" cy="35" r="4" fill="white" opacity="0.8"/>
+        </svg>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#missions">Missions</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#explore">Explore</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="nav-search-btn" id="nav-search-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Slider -->
+  <section class="hero-slider" id="hero">
+    <div class="slider-track" id="slider-track"></div>
+    <div class="slider-overlay"></div>
+    <div class="slider-content" id="slider-content"></div>
+    <div class="slider-controls">
+      <button class="slider-arrow prev" id="slider-prev" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+      </button>
+      <div class="slider-dots" id="slider-dots"></div>
+      <button class="slider-arrow next" id="slider-next" aria-label="Next slide">
+        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+    </div>
+    <div class="slider-progress" id="slider-progress"></div>
+    <div class="scroll-indicator">
+      <span>Scroll to Explore</span>
+      <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+    </div>
+  </section>
+
+  <!-- Missions Section -->
+  <section class="section missions" id="missions">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ACTIVE MISSIONS</span>
+        <h2 class="section-title">Exploring the <span class="gradient-text">Final Frontier</span></h2>
+        <p class="section-subtitle">From the depths of our oceans to the far reaches of the cosmos, NASA's missions push the boundaries of human knowledge.</p>
+      </div>
+      <div class="missions-grid" id="missions-grid"></div>
+    </div>
+  </section>
+
+  <!-- Image of the Day -->
+  <section class="section iotd" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">IMAGE OF THE DAY</span>
+        <h2 class="section-title">A Window to the <span class="gradient-text">Cosmos</span></h2>
+      </div>
+      <div class="iotd-card" id="iotd-card"></div>
+    </div>
+  </section>
+
+  <!-- Stats Counter -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="stats-grid" id="stats-grid"></div>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section class="section news" id="news">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">LATEST NEWS</span>
+        <h2 class="section-title">Breaking <span class="gradient-text">Discoveries</span></h2>
+      </div>
+      <div class="news-grid" id="news-grid"></div>
+    </div>
+  </section>
+
+  <!-- Explore / Interactive Section -->
+  <section class="section explore-section" id="explore">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">EXPLORE</span>
+        <h2 class="section-title">Journey Through the <span class="gradient-text">Solar System</span></h2>
+      </div>
+      <div class="planets-carousel" id="planets-carousel"></div>
+    </div>
+  </section>
+
+  <!-- About / CTA -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <span class="section-tag">ABOUT NASA</span>
+          <h2 class="section-title" style="text-align:left">For the Benefit of <span class="gradient-text">All</span></h2>
+          <p>The National Aeronautics and Space Administration is America's civil space program and the global leader in space exploration. The agency has a diverse workforce of just under 18,000 civil servants, and works with many more U.S. contractors, academia, and international and commercial partners to explore, discover, and expand knowledge for the benefit of humanity.</p>
+          <div class="about-stats">
+            <div class="about-stat"><span class="about-stat-num">65+</span><span>Years of Exploration</span></div>
+            <div class="about-stat"><span class="about-stat-num">200+</span><span>Active Missions</span></div>
+            <div class="about-stat"><span class="about-stat-num">18K</span><span>Team Members</span></div>
+          </div>
+          <a href="#" class="btn btn-primary">Learn More →</a>
+        </div>
+        <div class="about-image">
+          <img src="/astronaut.png" alt="Astronaut in space" />
+          <div class="about-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section newsletter">
+    <div class="container">
+      <div class="newsletter-card">
+        <h3>Stay Connected with NASA</h3>
+        <p>Get the latest updates on missions, discoveries, and events delivered to your inbox.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Enter your email address" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <svg viewBox="0 0 110 110" width="50" height="50"><circle cx="55" cy="55" r="50" fill="#0b3d91"/><text x="55" y="62" text-anchor="middle" fill="white" font-family="Outfit" font-weight="900" font-size="28">NASA</text></svg>
+            <p>National Aeronautics and Space Administration</p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul><li><a href="#">Missions</a></li><li><a href="#">Science</a></li><li><a href="#">Technology</a></li><li><a href="#">Aeronautics</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul><li><a href="#">Image Gallery</a></li><li><a href="#">NASA TV</a></li><li><a href="#">Podcasts</a></li><li><a href="#">Apps</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow NASA</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="YouTube">▶</a>
+            <a href="#" aria-label="Facebook">f</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 NASA Clone — For demonstration purposes only</p>
+        <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Accessibility</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
